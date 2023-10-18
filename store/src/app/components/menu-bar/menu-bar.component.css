@@ -25,7 +25,7 @@
 .menu-bar__item > ul{
   display: flex;
   list-style-type: none;
-
+  margin-left: 780px;
 }
 
 .menu-bar__item > ul > li{
