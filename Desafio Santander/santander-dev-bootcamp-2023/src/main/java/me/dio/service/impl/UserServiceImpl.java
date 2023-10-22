@@ -1,6 +1,6 @@
 package me.dio.service.impl;
 
-import me.dio.domain.model.User;
+import me.dio.domain.model.cliente;
 import me.dio.domain.repository.UserRepository;
 import me.dio.service.UserService;
 import org.springframework.stereotype.Service;
@@ -17,12 +17,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findById(Long id) {
+    public cliente findById(Long id) {
         return userRepository.findById(id).orElseThrow(NoSuchElementException::new);
     }
 
     @Override
-    public User create(User userToCreate) {
+    public cliente create(cliente userToCreate) {
         if (userRepository.existsByAccountNumber(userToCreate.getAccount().getNumber())) {
             throw new IllegalArgumentException("This Account number already exists.");
         }
