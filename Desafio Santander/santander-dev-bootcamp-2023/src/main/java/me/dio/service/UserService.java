@@ -1,10 +1,10 @@
 package me.dio.service;
 
-import me.dio.domain.model.User;
+import me.dio.domain.model.cliente;
 
 public interface UserService {
 
-    User findById(Long id);
+    cliente findById(Long id);
 
-    User create(User userToCreate);
+    cliente create(cliente userToCreate);
 }

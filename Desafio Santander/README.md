@@ -8,9 +8,9 @@ Java RESTful API criada para o Bootcamp Santander
 classDiagram
   class User {
     -String name
-    -Account account
+    -Account registro
     -Feature[] features
-    -Card card
+    -Card filmes
     -News[] news
   }
 

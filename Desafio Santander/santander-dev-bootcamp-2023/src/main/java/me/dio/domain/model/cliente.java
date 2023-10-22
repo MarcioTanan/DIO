@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity(name = "tb_user")
-public class User {
+public class cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,10 +14,10 @@ public class User {
     private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Account account;
+    private Registro registro;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Card card;
+    private filmes filmes;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Feature> features;
@@ -41,20 +41,20 @@ public class User {
         this.name = name;
     }
 
-    public Account getAccount() {
-        return account;
+    public Registro getAccount() {
+        return registro;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setAccount(Registro registro) {
+        this.registro = registro;
     }
 
-    public Card getCard() {
-        return card;
+    public filmes getCard() {
+        return filmes;
     }
 
-    public void setCard(Card card) {
-        this.card = card;
+    public void setCard(filmes filmes) {
+        this.filmes = filmes;
     }
 
     public List<Feature> getFeatures() {
